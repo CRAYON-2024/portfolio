@@ -1,8 +1,7 @@
-import { Anchor, Typography } from 'antd';
+import { Typography } from 'antd';
 import { menu, socialMedia } from './constant';
 import { FaGithub } from 'react-icons/fa';
-
-const { Link } = Anchor;
+import { CustomLink } from '../CustomLink';
 
 export const Footer = () => {
   return (
@@ -16,7 +15,7 @@ export const Footer = () => {
           <div className="flex flex-col space-y-4 py-6">
             <div className="flex items-center justify-center space-x-8">
               {menu.map((item, index) => (
-                <Link
+                <CustomLink
                   key={index}
                   href={item.href}
                   target={'_blank'}
@@ -30,7 +29,7 @@ export const Footer = () => {
               {socialMedia.map(({ icon, ...item }, index) => (
                 <div key={index} className="flex items-center space-x-2">
                   {<i> {icon} </i>}
-                  <Link
+                  <CustomLink
                     href={item.href}
                     target={'_blank'}
                     className="animated-underline text-xs font-semibold hover:text-secondary duration-200 sm:text-sm"
@@ -53,7 +52,7 @@ export const Footer = () => {
           <div className="flex md:flex-row flex-col gap-4 items-center justify-between py-6">
             <div className="flex items-center gap-x-2">
               <FaGithub />
-              <Link
+              <CustomLink
                 href="https://www.github.com/emiriko"
                 target={'_blank'}
                 className="text-xs font-semibold sm:text-sm"

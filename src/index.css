@@ -137,3 +137,41 @@ body {
   font-weight: 600;
   color: #092532;
 }
+
+.slick-track {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 16px;
+}
+
+.slick-list {
+  margin: 0 -5px;
+  display: grid;
+}
+.slick-slide > div {
+  padding: 0 5px;
+  height: 100%;
+}
+
+.slick-dots {
+  margin-top: 20px !important;
+  position: relative !important;
+}
+
+.slick-dots-bottom {
+  margin-top: 30px;
+  bottom: 0;
+}
+
+.slick-dots li button {
+  background-color: #323433 !important;
+}
+
+.slick-dots li.slick-active button {
+  background-color: #323433 !important;
+}
+
+.slick-arrow {
+  margin-top: 20px;
+  color: black !important;
+}

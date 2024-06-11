@@ -3,6 +3,7 @@ import ProfilePicture from '../../../../assets/Picture_No_Bg.png';
 import Decoration from '../../../../assets/decoration.svg';
 import { CustomButton } from '../../../elements';
 import { MdArrowOutward } from 'react-icons/md';
+import { URL_CV } from '../../AboutMeModule/constant';
 
 export const HeroSection: React.FC = () => (
   <section className="flex flex-col gap-y-16">
@@ -40,7 +41,7 @@ export const HeroSection: React.FC = () => (
             type="link"
             icon={<MdArrowOutward />}
             iconPosition="end"
-            href="https://docs.google.com/document/d/1omsQyNm0qcrr5CL_4yK5J2S4-GEpbJdaj9XxYgtex1E/edit"
+            href={URL_CV}
             target="_blank"
           >
             {' '}
