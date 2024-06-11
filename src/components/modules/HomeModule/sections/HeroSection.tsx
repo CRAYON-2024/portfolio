@@ -1,11 +1,11 @@
 import { Image, Typography } from 'antd';
-import ProfilePicture from '../../../assets/Picture_No_Bg.png';
-import Decoration from '../../../assets/decoration.svg';
-import { CustomButton } from '../../elements';
+import ProfilePicture from '../../../../assets/Picture_No_Bg.png';
+import Decoration from '../../../../assets/decoration.svg';
+import { CustomButton } from '../../../elements';
 import { MdArrowOutward } from 'react-icons/md';
 
 export const HeroSection: React.FC = () => (
-  <div className="flex flex-col gap-y-16">
+  <section className="flex flex-col gap-y-16">
     <div className="flex md:flex-row flex-col gap-16 w-full items-center justify-between">
       <div className="flex flex-col gap-y-8 w-full">
         <div className="flex flex-col gap-y-2 w-full">
@@ -67,5 +67,5 @@ export const HeroSection: React.FC = () => (
         </div>
       </div>
     </div>
-  </div>
+  </section>
 );

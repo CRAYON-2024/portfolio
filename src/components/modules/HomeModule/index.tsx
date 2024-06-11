@@ -1,9 +1,10 @@
-import { HeroSection } from './HeroSection';
+import { AchievementSection, HeroSection } from './sections';
 
 export const HomeModule = () => {
   return (
-    <section className="flex flex-col gap-y-20 py-16 relative px-12 bg-main">
+    <main className="flex flex-col gap-y-20 py-16 relative px-12 bg-main">
       <HeroSection />
-    </section>
+      <AchievementSection />
+    </main>
   );
 };
