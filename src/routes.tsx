@@ -1,7 +1,10 @@
 import { Fragment } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import { ConfigProvider } from 'antd';
+import { Route, Routes, useNavigate } from 'react-router-dom';
+import { ConfigProvider, Layout, Menu } from 'antd';
 import { Footer } from './components/elements';
+import Sider from 'antd/es/layout/Sider';
+import { HomeOutlined, InfoCircleOutlined, ProjectOutlined } from '@ant-design/icons';
+
 
 const PRESERVED: {
   [key: string]: { default: React.ComponentType };
@@ -31,9 +34,11 @@ const routes = Object.keys(ROUTES).map((route) => {
   return { path, component: ROUTES[route].default };
 });
 
+
 function App() {
   const App = preserved?.['_app'] || Fragment;
   const NotFound = preserved?.['_404'] || Fragment;
+  const navigate = useNavigate();
 
   return (
     <ConfigProvider
@@ -43,15 +48,33 @@ function App() {
         }
       }}
     >
-      <App>
-        <Routes>
-          {routes.map(({ path, component: Component = Fragment }) => (
-            <Route key={path} path={path} element={<Component />} />
-          ))}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <Footer />
-      </App>
+      <Layout style={{ minHeight: '100vh' }}>
+        <Sider collapsible>
+          <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" className='flex flex-col justify-center items-center py-8 px-4 fixed'>
+            <Menu.Item key="1" icon={<HomeOutlined />} onClick={() => navigate('/')}>
+              Home
+            </Menu.Item>
+            <Menu.Item key="2" icon={<InfoCircleOutlined />} onClick={() => navigate('/about')}>
+              About
+            </Menu.Item>
+            <Menu.Item key="3" icon={<ProjectOutlined />} onClick={() => navigate('/works')}>
+              Work
+            </Menu.Item>
+          </Menu>
+        </Sider>
+
+        <main className = "flex flex-col">
+          <App>
+            <Routes>
+              {routes.map(({ path, component: Component = Fragment }) => (
+                <Route key={path} path={path} element={<Component />} />
+              ))}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </App>
+          <Footer />
+        </main>
+      </Layout>
     </ConfigProvider>
   );
 }

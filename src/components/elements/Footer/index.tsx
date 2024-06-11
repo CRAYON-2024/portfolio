@@ -35,8 +35,8 @@ export const Footer = () => {
                     className="animated-underline text-xs font-semibold hover:text-secondary duration-200 sm:text-sm"
                     title={
                       <>
-                        <span className="block md:hidden">{item.name}</span>
-                        <span className="hidden md:block">{item.username}</span>
+                        <span className="block lg:hidden">{item.name}</span>
+                        <span className="hidden lg:block">{item.username}</span>
                       </>
                     }
                   />
@@ -49,7 +49,7 @@ export const Footer = () => {
 
       <div className="border-t lg:border-gray flex justify-center px-8">
         <div className="container">
-          <div className="flex md:flex-row flex-col gap-4 items-center justify-between py-6">
+          <div className="flex lg:flex-row flex-col gap-4 items-center justify-between py-6">
             <div className="flex items-center gap-x-2">
               <FaGithub />
               <CustomLink
@@ -58,11 +58,11 @@ export const Footer = () => {
                 className="text-xs font-semibold sm:text-sm"
                 title={
                   <>
-                    <span className="hidden md:block hover:text-secondary duration-200">
+                    <span className="hidden lg:block hover:text-secondary duration-200">
                       {' '}
                       github.com/emiriko{' '}
                     </span>
-                    <span className="block md:hidden hover:text-secondary duration-200">
+                    <span className="block lg:hidden hover:text-secondary duration-200">
                       {' '}
                       My GitHub{' '}
                     </span>

@@ -7,7 +7,7 @@ import { URL_CV } from '../../AboutMeModule/constant';
 
 export const HeroSection: React.FC = () => (
   <section className="flex flex-col gap-y-16">
-    <div className="flex md:flex-row flex-col gap-16 w-full items-center justify-between">
+    <div className="flex lg:flex-row flex-col gap-16 w-full items-center justify-between">
       <div className="flex flex-col gap-y-8 w-full">
         <div className="flex flex-col gap-y-2 w-full">
           <Typography.Text className="text-black text-3xl font-bold">

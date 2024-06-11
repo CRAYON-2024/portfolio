@@ -7,7 +7,7 @@ import FormalPicture from '../../../../assets/Formal.png';
 export const HeroSection: React.FC = () => {
   return (
     <section className="flex flex-col gap-x-8 gap-y-8 relative" id="about">
-      <div className="flex md:flex-row flex-col w-full gap-8 md:items-start items-center">
+      <div className="flex lg:flex-row flex-col w-full gap-8 lg:items-start items-center">
         <div className="w-full flex flex-col gap-y-12">
           <h1 className="text-secondary text-4xl font-bold">
             {' '}

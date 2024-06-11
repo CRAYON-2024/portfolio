@@ -23,7 +23,7 @@ export const ProjectSection: React.FC = () => {
           }
         />
       </div>
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 grid-flow-row gap-4">
+      <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 grid-flow-row gap-4">
         {APP_DATA.slice(0, width >= 768 ? 3 : width >= 640 ? 2 : 1).map(
           (project, key) => (
             <ProjectCard key={key} {...project} />
