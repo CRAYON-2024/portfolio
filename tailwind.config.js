@@ -7,7 +7,7 @@ export default {
         main: '#f4f6ff',
         primary: '#0DB760',
         secondary: '#323433',
-        gray: '#ABB2BF',
+        gray: '#ABB2BF'
       }
     }
   },

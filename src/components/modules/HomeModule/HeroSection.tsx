@@ -2,7 +2,7 @@ import { Image, Typography } from 'antd';
 import ProfilePicture from '../../../assets/Picture_No_Bg.png';
 import Decoration from '../../../assets/decoration.svg';
 import { CustomButton } from '../../elements';
-import { MdArrowOutward } from "react-icons/md";
+import { MdArrowOutward } from 'react-icons/md';
 
 export const HeroSection: React.FC = () => (
   <div className="flex flex-col gap-y-16">
@@ -18,7 +18,10 @@ export const HeroSection: React.FC = () => (
             Full-stack Developer<span className="text-black"> and </span>
             Software Engineer{' '}
           </Typography.Text>
-          <Typography.Text className="text-black text-3xl font-bold"> from Indonesia. </Typography.Text>
+          <Typography.Text className="text-black text-3xl font-bold">
+            {' '}
+            from Indonesia.{' '}
+          </Typography.Text>
         </div>
         <Typography.Text className="text-justify break-all break-words font-normal poppins text-secondary">
           Inquisitive, energetic, skilled and knowledgeable computer science
@@ -29,8 +32,20 @@ export const HeroSection: React.FC = () => (
           myself.
         </Typography.Text>
         <div className="flex gap-8">
-          <CustomButton type="primary"> Contact Me </CustomButton>
-          <CustomButton type="link" icon = {<MdArrowOutward />} iconPosition='end'> View CV </CustomButton>
+          <CustomButton type="primary" href="mailto:itsrealalvaro@gmail.com">
+            {' '}
+            Contact Me{' '}
+          </CustomButton>
+          <CustomButton
+            type="link"
+            icon={<MdArrowOutward />}
+            iconPosition="end"
+            href="https://docs.google.com/document/d/1omsQyNm0qcrr5CL_4yK5J2S4-GEpbJdaj9XxYgtex1E/edit"
+            target="_blank"
+          >
+            {' '}
+            View CV{' '}
+          </CustomButton>
         </div>
       </div>
       <div className="relative h-full">

@@ -1,2 +1,2 @@
 export * from './CustomButton';
-export * from "./Footer"
+export * from './Footer';

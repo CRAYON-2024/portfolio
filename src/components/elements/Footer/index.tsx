@@ -1,26 +1,28 @@
-import { menu, socialMedia } from './constant'
-import { FaGithub } from 'react-icons/fa'
+import { Anchor, Typography } from 'antd';
+import { menu, socialMedia } from './constant';
+import { FaGithub } from 'react-icons/fa';
+
+const { Link } = Anchor;
 
 export const Footer = () => {
   return (
     <footer className="bg-main" aria-labelledby="footer-heading">
-      <h2 id="footer-heading" className="sr-only">
+      <Typography.Text id="footer-heading" className="sr-only">
         Footer
-      </h2>
+      </Typography.Text>
 
       <div className="border-t lg:border-gray flex justify-center">
         <div className="container">
           <div className="flex flex-col space-y-4 py-6">
             <div className="flex items-center justify-center space-x-8">
               {menu.map((item, index) => (
-                <a
+                <Link
                   key={index}
                   href={item.href}
                   target={'_blank'}
                   className="animated-underline inline-flex items-center justify-center text-xs font-semibold hover:text-secondary duration-200 sm:text-sm"
-                >
-                  {item.name}
-                </a>
+                  title={item.name}
+                />
               ))}
             </div>
 
@@ -28,14 +30,17 @@ export const Footer = () => {
               {socialMedia.map(({ icon, ...item }, index) => (
                 <div key={index} className="flex items-center space-x-2">
                   {<i> {icon} </i>}
-                  <a
+                  <Link
                     href={item.href}
                     target={'_blank'}
                     className="animated-underline text-xs font-semibold hover:text-secondary duration-200 sm:text-sm"
-                  >
-                    <span className="block md:hidden">{item.name}</span>
-                    <span className="hidden md:block">{item.username}</span>
-                  </a>
+                    title={
+                      <>
+                        <span className="block md:hidden">{item.name}</span>
+                        <span className="hidden md:block">{item.username}</span>
+                      </>
+                    }
+                  />
                 </div>
               ))}
             </div>
@@ -48,27 +53,31 @@ export const Footer = () => {
           <div className="flex md:flex-row flex-col gap-4 items-center justify-between py-6">
             <div className="flex items-center gap-x-2">
               <FaGithub />
-              <a
+              <Link
                 href="https://www.github.com/emiriko"
                 target={'_blank'}
                 className="text-xs font-semibold sm:text-sm"
-              >
-                <span className="hidden md:block hover:text-secondary duration-200">
-                  {' '}
-                  github.com/emiriko{' '}
-                </span>
-                <span className="block md:hidden hover:text-secondary duration-200">
-                  {' '}
-                  My GitHub{' '}
-                </span>
-              </a>
+                title={
+                  <>
+                    <span className="hidden md:block hover:text-secondary duration-200">
+                      {' '}
+                      github.com/emiriko{' '}
+                    </span>
+                    <span className="block md:hidden hover:text-secondary duration-200">
+                      {' '}
+                      My GitHub{' '}
+                    </span>
+                  </>
+                }
+              />
             </div>
-            <p className="flex items-center justify-center text-xs font-semibold sm:text-sm">
-              ©{new Date().getFullYear()} - Alvaro Austin . All Rights Reserved.
-            </p>
+            <Typography.Text className="flex items-center justify-center text-xs font-semibold sm:text-sm">
+              ©{new Date().getFullYear()} - Alvaro Austin . All Rights
+              Reserved.
+            </Typography.Text>
           </div>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
